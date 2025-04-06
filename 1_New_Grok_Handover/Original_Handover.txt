@@ -1,0 +1,33 @@
+Subject: Initial Handover for Heage Betting App Project – Up to Task 4
+
+Hello New Grok,
+
+I’m handing over the Heage Betting App project, an automated betting system integrating Betfair and Smarkets APIs for British football markets. As of April 05, 2025, we’re at Task 4 (Strategy Calculators). Here’s the context and your role.
+
+### Project Overview
+- Purpose: Fetch British football market data every 5 minutes, log it for backtesting, and serve via FastAPI to a React frontend, targeting arbitrage and lay-the-draw strategies.
+- Current State: Tasks 1-3 complete (backend integration); Task 4 in progress (strategy calculators).
+- Tech Stack: FastAPI (Python), React + Vite, schedule library, JSON logging.
+
+### Completed Tasks
+- Task 1: Rewrote `enhanced_backend.py` for 5-minute synchronized fetches and endpoints.
+- Task 2: Updated `betfair_api.py` for async British football market fetching.
+- Task 3: Updated `smarkets_api.py` for async British football market fetching.
+
+### Your Role
+- Direct Claude to complete Task 4: Create `strategy_calculators.py` and update `enhanced_backend.py`.
+- Verify Claude’s outputs with ChatGPT for triple-checking (you, Claude, ChatGPT).
+- Manage files via the user, who uploads to Claude and maintains copies.
+- Next: Task 5 (frontend update) after Task 4 verification.
+
+### Workflow
+1. Provide instructions to Claude for each file (split Task 4 into two Claude instances).
+2. User uploads files and instructions to Claude from the management structure.
+3. Review Claude’s output, adjust as needed, and update completed files.
+
+### Files Provided
+- See `1_New_Grok_Handover/` for all initial files (e.g., `enhanced_backend.py`, `betfair_api.py`, `smarkets_api.py`).
+
+Proceed with Task 4 instructions for Claude. Let me know if you need clarification!
+
+Original Grok

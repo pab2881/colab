@@ -1,0 +1,13 @@
+Task 1: Rewrite enhanced_backend.py
+Claude Assistant 1:
+Objective: Create a unified FastAPI backend integrating Betfair and Smarkets with 5-minute synchronized fetching.
+Existing Code: enhanced_backend.py (and reference server.cjs for Betfair auth logic).
+Requirements:
+Use BetfairAPI and SmarketsAPI classes for fetching.
+Fetch British football markets (list provided) every 5 minutes using schedule.
+Log markets and odds to data/markets_<timestamp>.json.
+Detect lag between Betfair and Smarkets fetches; if >1s, offset Smarkets fetch by the lag amount using async tasks.
+Include endpoints: /health, /api/live-markets, /api/odds/{platform}/{market_id}.
+Output: Updated enhanced_backend.py.
+Verification: I’ll check for correct scheduling, logging, and lag handling; ChatGPT will confirm syntax and logic.
+

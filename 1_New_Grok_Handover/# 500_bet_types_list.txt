@@ -1,0 +1,519 @@
+# 500_bet_types_list.txt
+# List of 500 football bet types for Heage Betting App
+# Date: April 05, 2025
+
+# Match Outcome Bets (1–50)
+1. 1X2 (Match Result)
+2. Double Chance (1X, X2, 12)
+3. Draw No Bet (DNB)
+4. Win Either Half
+5. Win Both Halves
+6. Team to Win from Behind
+7. Team to Win to Nil
+8. Match to Go to Extra Time
+9. Match to Go to Penalties
+10. Team to Win a Penalty Shootout
+11. Half-Time Result (1X2)
+12. Full-Time Result with Handicap
+13. Team to Win by Exactly 1 Goal
+14. Team to Win by 2+ Goals
+15. Team to Win by 3+ Goals
+16. No Goalscorer (0-0 or No Goals)
+17. Team to Lead at Half-Time
+18. Team to Lead at Full-Time
+19. Team to Come Back from 2 Goals Down
+20. Match to End in a Draw After Extra Time
+21. Team to Win After Extra Time
+22. Team to Win in Regular Time Only
+23. Match to End in a Shootout Draw
+24. Team to Win After Conceding First
+25. Team to Win Without Scoring in First Half
+26. Team to Win After Trailing at Half-Time
+27. Team to Win by 4+ Goals
+28. Team to Win by 5+ Goals
+29. Team to Win After Being Level at 75 Minutes
+30. Team to Win Without Conceding in Second Half
+31. Team to Win After a Red Card
+32. Team to Win with a Clean Sheet in Extra Time
+33. Team to Win After Scoring First Goal
+34. Team to Win Without a Shot in First 15 Minutes
+35. Team to Win After VAR Goal Decision
+36. Team to Win with Last Kick of the Game
+37. Team to Win After Missing a Penalty
+38. Team to Win Without a Corner in First Half
+39. Team to Win After Opponent Hits Woodwork
+40. Team to Win with Fewer Shots on Target
+41. Team to Win After Opponent Red Card
+42. Team to Win Without Leading at Half-Time
+43. Team to Win After a 0-0 First Half
+44. Team to Win with a Goal in Stoppage Time
+45. Team to Win After a Draw at 60 Minutes
+46. Team to Win Without a Card Against Them
+47. Team to Win After a Substitution Goal
+48. Team to Win with Fewer Corners
+49. Team to Win After a Goalkeeper Save
+50. Team to Win Without Possession Advantage
+
+# Goals Bets (51–150)
+51. Over/Under 0.5 Goals
+52. Over/Under 1.5 Goals
+53. Over/Under 2.5 Goals
+54. Over/Under 3.5 Goals
+55. Over/Under 4.5 Goals
+56. Both Teams to Score (BTTS)
+57. Exact Number of Goals (0)
+58. Exact Number of Goals (1)
+59. Exact Number of Goals (2)
+60. Exact Number of Goals (3)
+61. Exact Number of Goals (4)
+62. Goal Range (0-1)
+63. Goal Range (2-3)
+64. Goal Range (4-6)
+65. Time of First Goal (0-15 min)
+66. Time of First Goal (16-30 min)
+67. Time of Last Goal (After 80 min)
+68. Goal in Both Halves
+69. Goal Before 10 Minutes
+70. Goal After 70 Minutes
+71. First Half Over/Under 0.5 Goals
+72. First Half Over/Under 1.5 Goals
+73. Second Half Over/Under 0.5 Goals
+74. Second Half Over/Under 1.5 Goals
+75. Team to Score First
+76. Team to Score Last
+77. Odd/Even Goals
+78. Multi-Goal (1-2)
+79. Multi-Goal (3-4)
+80. Goal from Outside the Box
+81. Header Scored in Match
+82. Own Goal in Match
+83. Goal from a Free Kick
+84. Goal from a Corner
+85. Goal from a Throw-In Assist
+86. No Goals in First Half
+87. No Goals in Second Half
+88. Team to Score 2+ Goals
+89. Team to Score 3+ Goals
+90. Goals in First 5 Minutes
+91. Over/Under 5.5 Goals
+92. Over/Under 6.5 Goals
+93. Exact Number of Goals (5)
+94. Exact Number of Goals (6)
+95. Goal Range (7+)
+96. Time of First Goal (31-45 min)
+97. Time of Last Goal (Before 60 min)
+98. Goal from a Rebound
+99. Goal from a Goalkeeper Error
+100. Team to Score in Every 15-Minute Segment
+101. Over/Under 7.5 Goals
+102. Over/Under 8.5 Goals
+103. Exact Number of Goals (7)
+104. Exact Number of Goals (8)
+105. Goal Before 5 Minutes
+106. Goal After 85 Minutes
+107. First Half Over/Under 2.5 Goals
+108. Second Half Over/Under 2.5 Goals
+109. Team to Score in First 10 Minutes
+110. Team to Score in Last 10 Minutes
+111. Goals in Both Halves by One Team
+112. Goal Before a Corner
+113. Goal After a Card
+114. Goal from a Long Pass
+115. Goal from a Solo Run
+116. Goal from a Set Piece
+117. No Goals Before 20 Minutes
+118. No Goals After 75 Minutes
+119. Team to Score 4+ Goals
+120. Team to Score 5+ Goals
+121. Over/Under 0.5 Goals in First 15 Minutes
+122. Over/Under 1.5 Goals in Last 15 Minutes
+123. Goal in Extra Time
+124. Goal in Penalty Shootout
+125. Team to Score Only Goal
+126. Goal from a Deflected Shot
+127. Goal from a Volley
+128. Goal from a Backheel
+129. Goal from a Cross
+130. Goal from a Through Ball
+131. Over/Under 3.5 Goals in Second Half
+132. Over/Under 4.5 Goals in First Half
+133. Team to Score in Every 30-Minute Segment
+134. Goal After a Substitution
+135. Goal Before a Substitution
+136. Goal from a Counter-Attack
+137. Goal After a Foul
+138. Goal from a Goalkeeper Assist
+139. Goal from a Midfielder
+140. Goal from a Defender
+141. Goal from a Striker
+142. Goal Before VAR Check
+143. Goal After VAR Overturn
+144. No Goals in Extra Time
+145. Team to Score in Both Extra Time Halves
+146. Goal from a Long-Range Shot (30+ yards)
+147. Goal from a Short-Range Shot (Inside 6 yards)
+148. Goal from a Mid-Range Shot (6-18 yards)
+149. Over/Under 9.5 Goals
+150. Exact Number of Goals (9+)
+
+# Score Bets (151–200)
+151. Correct Score
+152. Half-Time/Full-Time (HT/FT)
+153. Winning Margin (by 1)
+154. Winning Margin (by 2)
+155. Winning Margin (by 3)
+156. Exact Score at Half-Time
+157. Scorecast (Goalscorer + Result)
+158. Wincast (Goalscorer + Team Win)
+159. First Half Correct Score
+160. Second Half Correct Score
+161. Team to Lead at Half-Time and Full-Time
+162. Team to Trail at Half-Time and Win
+163. Team to Lead After 15 Minutes
+164. Team to Win After Trailing at Any Point
+165. Exact Goals Difference (e.g., 1-0 or 2-1)
+166. Winning Margin (by 4+)
+167. Team to Lead After 30 Minutes
+168. Team to Win After Being Level at Half-Time
+169. Exact Score After 15 Minutes
+170. Team to Win with a Last-Minute Goal
+171. Winning Margin (by 5+)
+172. Team to Lead After 60 Minutes
+173. Team to Win After Trailing by 2+ Goals
+174. Exact Score After 30 Minutes
+175. Team to Win with a Goal in Extra Time
+176. Team to Lead at 15, 30, and 45 Minutes
+177. Team to Trail at Half-Time and Draw
+178. Exact Score at 60 Minutes
+179. Team to Win After a 1-1 Half-Time Score
+180. Team to Win with a Penalty Goal
+181. Team to Lead After 75 Minutes
+182. Team to Win After a 0-0 Half-Time
+183. Exact Score After 75 Minutes
+184. Team to Win with a Free Kick Goal
+185. Team to Lead at Half-Time and Lose
+186. Team to Trail After 15 Minutes and Win
+187. Exact Score in Extra Time
+188. Team to Win After a Shootout Goal
+189. Team to Lead After First Substitution
+190. Team to Win with a Header Goal
+191. Team to Lead After First Card
+192. Team to Win After a VAR Decision
+193. Exact Score After First Goal
+194. Team to Win with an Own Goal
+195. Team to Lead at 90 Minutes and Draw
+196. Team to Win After a Red Card to Opponent
+197. Exact Score After Second Half Kick-Off
+198. Team to Win with a Goal from a Defender
+199. Team to Lead After a Corner Goal
+200. Team to Win After a Goalkeeper Error
+
+# Player-Specific Bets (201–300)
+201. First Goalscorer
+202. Anytime Goalscorer
+203. Last Goalscorer
+204. Player to Score 2+ Goals
+205. Player to Score a Hat-Trick
+206. Player to Assist a Goal
+207. Player to Assist 2+ Goals
+208. Player to be Booked (Yellow Card)
+209. Player to be Sent Off (Red Card)
+210. Player Shots on Target (Over 0.5)
+211. Player Shots on Target (Over 1.5)
+212. Player Shots (Over 1.5)
+213. Player Shots (Over 2.5)
+214. Player Passes Completed (Over 20)
+215. Player Tackles (Over 1.5)
+216. Player Offsides (Over 0.5)
+217. Player to Win a Free Kick
+218. Player to Commit a Foul (Over 0.5)
+219. Goalkeeper to Save a Penalty
+220. Player to Hit the Woodwork
+221. Player to Dribble Past 2+ Opponents
+222. Player to Score and be Booked
+223. Player to Score from a Free Kick
+224. Player to Score a Header
+225. Player to Miss a Penalty
+226. Player to Score and Assist
+227. Player Shots on Target (Over 3.5)
+228. Player Passes Completed (Over 50)
+229. Player to Commit 2+ Fouls
+230. Player to Win 2+ Free Kicks
+231. Player to Score from a Penalty
+232. Player to Miss a Shot on Target
+233. Player to Be Subbed On First
+234. Player to Be Involved in VAR Decision
+235. Player to Score in Both Halves
+236. Player Shots (Over 4.5)
+237. Player Passes Completed (Over 75)
+238. Player Tackles (Over 3.5)
+239. Player Offsides (Over 1.5)
+240. Player to Commit 3+ Fouls
+241. Player to Win 3+ Free Kicks
+242. Player to Score in First 15 Minutes
+243. Player to Score in Last 15 Minutes
+244. Player to Assist in First Half
+245. Player to Assist in Second Half
+246. Player to Be Booked in First Half
+247. Player to Be Booked in Second Half
+248. Player to Be Sent Off in First Half
+249. Player to Be Sent Off in Second Half
+250. Player Shots on Target (Over 5.5)
+251. Player to Score from Outside the Box
+252. Player to Score from a Corner
+253. Player to Score from a Throw-In Assist
+254. Player to Miss a Header
+255. Player to Hit the Crossbar
+256. Player to Hit the Post
+257. Player to Dribble Past 5+ Opponents
+258. Player to Score and Win a Free Kick
+259. Player to Score and Commit a Foul
+260. Player to Assist and Be Booked
+261. Player to Score in Extra Time
+262. Player to Assist in Extra Time
+263. Player to Be Booked in Extra Time
+264. Player to Score in Penalty Shootout
+265. Player to Miss in Penalty Shootout
+266. Player to Score from a Rebound
+267. Player to Score from a Goalkeeper Error
+268. Player to Be Subbed Off in First Half
+269. Player to Be Subbed Off in Second Half
+270. Player to Be Subbed On in First Half
+271. Player to Be Subbed On in Second Half
+272. Player to Score from a Volley
+273. Player to Score from a Backheel
+274. Player to Score from a Cross
+275. Player to Score from a Through Ball
+276. Player to Assist from a Free Kick
+277. Player to Assist from a Corner
+278. Player to Assist from a Throw-In
+279. Player to Be Involved in a Goal Line Clearance
+280. Player to Make a Goal Line Clearance
+281. Player to Score from a Deflection
+282. Player to Score from a Long Pass
+283. Player to Score from a Solo Run
+284. Player to Be Booked for Diving
+285. Player to Be Booked for Dissent
+286. Player to Be Booked for Time-Wasting
+287. Player to Win a Penalty
+288. Player to Concede a Penalty
+289. Player to Score and Hit the Woodwork
+290. Player to Assist and Hit the Woodwork
+291. Player to Score in First 5 Minutes
+292. Player to Score in Last 5 Minutes
+293. Player to Be Booked Before 15 Minutes
+294. Player to Be Booked After 75 Minutes
+295. Player to Assist Before 15 Minutes
+296. Player to Assist After 75 Minutes
+297. Player to Score from a Midfielder Position
+298. Player to Score from a Defender Position
+299. Player to Score from a Striker Position
+300. Player to Be Man of the Match
+
+# Team Event Bets (301–400)
+301. Total Corners (Over/Under 8.5)
+302. Team Corners (Over/Under 4.5 per Team)
+303. First Corner
+304. Last Corner
+305. Corners Race (First to 5 Corners)
+306. Exact Number of Corners (8)
+307. Exact Number of Corners (10)
+308. Total Cards (Over/Under 3.5)
+309. Team Cards (Over/Under 1.5 per Team)
+310. First Card
+311. Last Card
+312. Red Card in Match
+313. Clean Sheet (Team Doesn’t Concede)
+314. Team to Hit the Woodwork
+315. Team Offsides (Over/Under 2.5)
+316. Team Shots on Target (Over/Under 4.5)
+317. Team Shots (Over/Under 8.5)
+318. Team Possession Percentage (Over/Under 50%)
+319. Team to Win Most Corners
+320. Team to Commit Most Fouls
+321. Team to Take Most Shots
+322. Team to Have Most Throw-Ins
+323. Team to Win Most Free Kicks
+324. Team to Lead in Shots at Half-Time
+325. Team to Have Highest Pass Completion
+326. Team Corners (Over/Under 6.5)
+327. Team Cards (Over/Under 3.5)
+328. Team to Win Most Tackles
+329. Team to Have Most Offsides
+330. Team to Lead in Shots After 15 Minutes
+331. Team to Have Most Possession in First Half
+332. Team to Win Most Duels
+333. Team to Have Most Shots Off Target
+334. Team to Concede Most Corners
+335. Team to Have Most Saves by Goalkeeper
+336. Team Corners (Over/Under 8.5)
+337. Team Cards (Over/Under 5.5)
+338. Team to Win Most Headers
+339. Team to Have Most Interceptions
+340. Team to Lead in Shots After 30 Minutes
+341. Team to Have Most Possession in Second Half
+342. Team to Win Most Ground Duels
+343. Team to Have Most Shots in First Half
+344. Team to Concede Most Free Kicks
+345. Team to Have Most Shots in Second Half
+346. Team Corners (Over/Under 10.5)
+347. Team Cards (Over/Under 7.5)
+348. Team to Win Most Aerial Duels
+349. Team to Have Most Blocks
+350. Team to Lead in Shots After 60 Minutes
+351. Team to Have Most Possession in Extra Time
+352. Team to Win Most Challenges
+353. Team to Have Most Shots on Target in First Half
+354. Team to Concede Most Throw-Ins
+355. Team to Have Most Shots on Target in Second Half
+356. Team Corners (Over/Under 12.5)
+357. Team Cards (Over/Under 9.5)
+358. Team to Win Most Passes
+359. Team to Have Most Clearances
+360. Team to Lead in Shots After 75 Minutes
+361. Team to Have Most Possession in First 15 Minutes
+362. Team to Win Most Fouls Drawn
+363. Team to Have Most Shots Before 15 Minutes
+364. Team to Concede Most Shots
+365. Team to Have Most Shots After 75 Minutes
+366. Team Corners in First 10 Minutes (Over/Under 1.5)
+367. Team Cards in First 15 Minutes (Over/Under 0.5)
+368. Team to Win Most Dribbles
+369. Team to Have Most Goal Kicks
+370. Team to Lead in Shots in Extra Time
+371. Team to Have Most Possession in Last 15 Minutes
+372. Team to Win Most Throw-Ins in First Half
+373. Team to Have Most Shots in Extra Time
+374. Team to Concede Most Offsides
+375. Team to Have Most Shots Before Half-Time
+376. Team Corners in Last 10 Minutes (Over/Under 1.5)
+377. Team Cards in Last 15 Minutes (Over/Under 0.5)
+378. Team to Win Most Free Kicks in Second Half
+379. Team to Have Most Free Kicks Conceded
+380. Team to Lead in Shots Before 30 Minutes
+381. Team to Have Most Possession Before 15 Minutes
+382. Team to Win Most Corners in First Half
+383. Team to Have Most Shots After a Substitution
+384. Team to Concede Most Cards
+385. Team to Have Most Shots After a Card
+386. Team Corners in Extra Time (Over/Under 1.5)
+387. Team Cards in Extra Time (Over/Under 0.5)
+388. Team to Win Most Tackles in Second Half
+389. Team to Have Most Interceptions in First Half
+390. Team to Lead in Shots in Penalty Shootout
+391. Team to Have Most Possession After 75 Minutes
+392. Team to Win Most Headers in Extra Time
+393. Team to Have Most Shots Off Target in First Half
+394. Team to Concede Most Shots on Target
+395. Team to Have Most Shots Off Target in Second Half
+396. Team Corners Before 15 Minutes (Over/Under 1.5)
+397. Team Cards Before 30 Minutes (Over/Under 1.5)
+398. Team to Win Most Duels in Extra Time
+399. Team to Have Most Clearances in Second Half
+400. Team to Have Most Shots in Last 5 Minutes
+
+# Game Incident Bets (401–450)
+401. Penalty Taken
+402. Penalty Scored
+403. Penalty Missed
+404. VAR Review in Match
+405. Substitution Before 30 Minutes
+406. Free Kick Goal
+407. Corner in First 5 Minutes
+408. Card in First 10 Minutes
+409. Goal Disallowed by VAR
+410. Stoppage Time Over/Under 4 Minutes
+411. Injury Time Goal
+412. Referee to Show 5+ Cards
+413. Match Abandoned
+414. Pitch Invader Incident
+415. Weather Delay (Yes/No)
+416. Goal Line Technology Used
+417. Referee to Blow Whistle Before Kick-Off
+418. Ball to Burst During Match
+419. Player Injured in First Half
+420. Substitution Due to Injury
+421. Second Penalty Taken
+422. Two Penalties in Match
+423. Card Before Corner in First Half
+424. Goal After a VAR Review
+425. Substitution in Stoppage Time
+426. Three Penalties in Match
+427. Card After a Goal in Second Half
+428. Goal Disallowed by Offside
+429. Stoppage Time Over/Under 6 Minutes
+430. Extra Time Goal
+431. Referee to Show 7+ Cards
+432. Match Delayed by Crowd Trouble
+433. Animal on Pitch Incident
+434. Lightning Delay (Yes/No)
+435. Goal Line Clearance in Match
+436. Referee to Signal Half-Time Early
+437. Ball to Be Replaced in First Half
+438. Player Injured in Second Half
+439. Substitution Before 15 Minutes
+440. Four Penalties in Match
+441. Card Before Goal in First Half
+442. Goal After a Substitution
+443. Substitution in Extra Time
+444. Five Cards in First Half
+445. Referee to Show 10+ Cards
+446. Match Delayed by Floodlights Failure
+447. Drone Interruption Incident
+448. Fog Delay (Yes/No)
+449. Goal Line Technology Overturned
+450. Referee to End Match Early
+
+# Specialty and Combo Bets (451–500)
+451. Match Specials (Win & Over 2.5)
+452. BTTS & Over 2.5 Goals
+453. BTTS & Team to Win
+454. Over 10 Corners & Over 2.5 Goals
+455. Team to Win & Player to Score
+456. Half with Most Goals
+457. Shutout in First Half
+458. Shutout in Second Half
+459. Both Teams to Hit the Woodwork
+460. Goal, Card, and Corner in First Half
+461. Player to Score & Team to Win to Nil
+462. Over 15 Shots & Over 8 Corners
+463. Team to Win & Under 2.5 Goals
+464. Exact Goals & Exact Corners Combo
+465. First Goal and First Card Combo
+466. Red Card & Over 2.5 Goals
+467. Penalty & BTTS
+468. Corner Before Goal in First Half
+469. Team to Win & Clean Sheet
+470. Over 5 Cards & Under 2 Goals
+471. BTTS & Over 3.5 Goals
+472. Team to Win & Over 10 Corners
+473. Player to Score, Card, and Corner in Match
+474. Over 7 Cards & Over 2.5 Goals
+475. Team to Win & Goal Before 15 Minutes
+476. BTTS & Under 3.5 Goals
+477. Team to Win & Over 12 Corners
+478. Player to Assist, Card, and Corner in Match
+479. Over 9 Cards & Over 3.5 Goals
+480. Team to Win & Goal After 75 Minutes
+481. BTTS & Over 4.5 Goals
+482. Team to Win & Over 15 Shots
+483. Player to Score, Assist, and Be Booked
+484. Over 10 Cards & Under 2.5 Goals
+485. Team to Win & Goal Before 30 Minutes
+486. BTTS & Under 2.5 Goals
+487. Team to Win & Over 20 Shots
+488. Player to Score Twice & Team to Win
+489. Over 12 Cards & Over 4.5 Goals
+490. Team to Win & Goal in Last 5 Minutes
+491. BTTS & Over 5.5 Goals
+492. Team to Win & Over 25 Shots
+493. Player to Score Hat-Trick & Team to Win
+494. Over 15 Cards & Under 3.5 Goals
+495. Team to Win & Goal Before 30 Minutes
+496. BTTS & Over 6.5 Goals
+497. Team to Win & Over 30 Shots
+498. Player to Score and Assist Twice
+499. Over 20 Cards & Over 5.5 Goals
+500. Team to Win & Goal After 85 Minutes
+
+

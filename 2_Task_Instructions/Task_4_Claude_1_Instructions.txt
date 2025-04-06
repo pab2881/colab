@@ -1,0 +1,64 @@
+Subject: Task 4 (Part 1) – Create strategy_calculators.py for Heage Betting App
+
+Hello Claude,
+
+I’m Grok 3, overseeing the Heage Betting App project, an automated betting system integrating Betfair and Smarkets APIs. Your sole task is to write the code for `strategy_calculators.py` as per the instructions below—nothing more.
+
+#### Objective:
+Create a new module to calculate arbitrage and lay-the-draw betting strategies, enabling the identification of profitable opportunities across Betfair and Smarkets.
+
+#### Existing Code:
+- No existing `strategy_calculators.py` (this is a new file).
+- Reference files for style:
+  - `hedge_calculator.py`: For class structure and commission handling.
+  - `smarkets_api.py` and `betfair_api.py`: For logging and coding style.
+
+#### Requirements:
+1. **Create a `StrategyCalculators` Class:**
+   - Define class constants:
+     - `BETFAIR_COMMISSION = 0.05` (5%)
+     - `SMARKETS_COMMISSION = 0.02` (2%)
+   - Implement two methods:
+     a. **`calculate_arbitrage(back_odds: float, lay_odds: float, back_platform: str, stake: float) -> Dict[str, Any]:`**
+        - Inputs:
+          - `back_odds`: Decimal odds for the back bet (e.g., 2.0).
+          - `lay_odds`: Decimal odds for the lay bet (e.g., 2.1).
+          - `back_platform`: Either "betfair" or "smarkets".
+          - `stake`: GBP amount for the back bet (e.g., 100.0).
+        - Logic:
+          - Lay stake = `(back_odds * stake) / lay_odds`.
+          - Back profit = `(back_odds - 1) * stake * (1 - 0.05)` if `back_platform` is "betfair", else `(1 - 0.02)` for "smarkets".
+          - Lay profit = `stake - lay_stake * (lay_odds - 1) * (1 - commission)` (use opposite platform’s commission).
+          - Total profit = Min of (Back profit - Lay stake) or (stake - Lay stake * (lay_odds - 1)).
+        - Return: `{"profit": float, "lay_stake": float, "is_profitable": bool}` (profit > 0).
+     b. **`calculate_lay_the_draw(lay_odds: float, back_odds: float, lay_stake: float) -> Dict[str, Any]:`**
+        - Inputs:
+          - `lay_odds`: Decimal odds to lay the draw (e.g., 3.5).
+          - `back_odds`: Decimal odds to back post-draw (e.g., 2.0).
+          - `lay_stake`: GBP amount to lay the draw (e.g., 50.0).
+        - Logic:
+          - Commission: Use `BETFAIR_COMMISSION = 0.05` (Betfair only).
+          - Liability = `lay_stake * (lay_odds - 1)`.
+          - Profit if draw = `lay_stake * (1 - 0.05) - Liability` (typically negative).
+          - Profit if not draw = `lay_stake * (1 - 0.05)` + `(back_odds - 1) * lay_stake * (1 - 0.05)`.
+        - Return: `{"profit_if_not_draw": float, "profit_if_draw": float, "is_profitable": bool}` (profit_if_not_draw > 0).
+2. **Input Validation:**
+   - If odds < 1.0 or `back_platform` not in ["betfair", "smarkets"], return `{"error": "Invalid input"}`.
+3. **Logging:**
+   - Use `logging.getLogger(__name__)`.
+   - File handler: `"logs/strategy.log"`.
+   - Format: `'%(asctime)s - %(name)s - %(levelname)s - %(message)s'`.
+   - Log method entry (e.g., "Calculating arbitrage: back_odds=2.0, lay_odds=2.1") and results (e.g., "Arbitrage profit=5.23").
+
+#### Output:
+- New file: `strategy_calculators.py`.
+- Functionality: A `StrategyCalculators` class with `calculate_arbitrage` and `calculate_lay_the_draw` methods, proper logging, and input validation.
+
+#### Notes:
+- Imports: `logging`, `os`.
+- Style: Match `hedge_calculator.py` for structure (e.g., class constants) and `smarkets_api.py` for logging.
+
+Please provide `strategy_calculators.py` in your response.
+
+Thank you,  
+Grok 3

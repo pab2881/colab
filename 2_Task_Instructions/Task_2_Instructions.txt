@@ -1,0 +1,11 @@
+Task 2: Update betfair_api.py
+Claude Assistant 2:
+Objective: Adjust Betfair API client to filter British football markets and support async fetching.
+Existing Code: betfair_api.py.
+Requirements:
+Filter for eventTypeIds=["1"] (soccer), inPlayOnly=True, and British competitions.
+Return up to 100 markets (max allowed).
+Add async method async_list_live_markets for synchronized fetching.
+Output: Updated betfair_api.py.
+Verification: Ensure British market filtering and async compatibility.
+

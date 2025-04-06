@@ -1,0 +1,11 @@
+Task 3: Update smarkets_api.py
+Claude Assistant 3:
+Objective: Adjust Smarkets API client to filter British football markets and support async fetching.
+Existing Code: smarkets_api.py.
+Requirements:
+Filter for football competitions in BRITISH_COMPETITIONS.
+Limit to 5 competitions and 10 events each to respect 1 req/sec limit.
+Add async method async_list_live_markets.
+Output: Updated smarkets_api.py.
+Verification: Confirm filtering and async support.
+

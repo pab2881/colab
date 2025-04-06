@@ -1,0 +1,37 @@
+Project Overview Report
+Project Title: Heage Betting App - Automated Betting System with Betfair and Smarkets Integration
+Purpose
+The Heage Betting App is an automated betting system designed to fetch, analyze, and log soccer market data from Betfair and Smarkets, focusing on British football leagues (e.g., Premier League, Championship, League One, League Two, FA Cup, EFL Cup, Scottish Premiership, Scottish Championship). The system aims to identify profitable hedging opportunities (e.g., arbitrage, lay-the-draw) by collecting odds data every 5 minutes, storing it for backtesting, and presenting it through a simple React frontend. The integration of Smarkets alongside Betfair enhances arbitrage potential due to differing commission rates (Betfair 5%, Smarkets 2%) and market dynamics.
+Current State
+Backend: A hybrid setup exists with server.cjs (Node.js) handling Betfair authentication and basic market/odds fetching, and enhanced_backend.py (FastAPI) extending to Smarkets and Odds API with advanced endpoints (e.g., /api/betfair/live-markets, /api/hedge-opportunities). Calculation logic is in hedge_calculator.py and three_way_calculator.py.
+Frontend: A React + Vite setup (RecentOdds.jsx, CrossPlatformHedging.jsx, etc.) displays Betfair odds and hedge opportunities, polling every few seconds, but lacks Smarkets integration and full automation controls.
+Data: Odds are logged to live_markets.json and log files (e.g., backend.log), with no database yet implemented.
+Research: Extensive notes outline strategies (arbitrage, lay-the-draw, three-way hedging) and British football market focus.
+End Goals
+Smarkets Integration: Fully integrate Smarkets API to fetch live markets and odds alongside Betfair, enabling cross-platform hedging.
+Synchronized Data Fetching: Fetch British football market data from Betfair and Smarkets every 5 minutes, logging odds to JSON files for backtesting, with lag compensation if detected.
+Functional Verification: Ensure all existing endpoints (e.g., /health, /api/live-markets, /api/odds) work correctly with both platforms.
+Strategy Calculators: Implement calculators for arbitrage and lay-the-draw strategies, extensible for future additions (e.g., three-way hedging).
+Simple Frontend: Display synchronized Betfair and Smarkets odds in a minimal React UI, refreshed every 5 minutes, without complex features.
+Backtesting Foundation: Store comprehensive odds data for future strategy development and testing.
+How We Are Building It
+Leadership: I (Grok) will direct the project, providing a structured plan and detailed instructions for Claude to rewrite existing code. I’ll verify Claude’s output, with ChatGPT providing a second review for quality assurance.
+Code Rewriting: Claude will rewrite specific files (enhanced_backend.py, smarkets_api.py, betfair_api.py, RecentOdds.jsx) based on my instructions, using a fresh assistant for each task to avoid context limits.
+Technology Stack:
+Backend: Consolidate to FastAPI (Python) for its async capabilities, replacing server.cjs. Use betfair_api.py and smarkets_api.py for platform-specific logic.
+Frontend: Retain React + Vite, simplifying to a single RecentOdds.jsx component.
+Scheduling: Use Python’s schedule library for 5-minute polling.
+Storage: Log to JSON files in a data/ directory, with potential future SQLite integration.
+Development Process: Iterative, with each Claude task focusing on one file or module, followed by verification and integration into the main codebase.
+Key Principles
+Simplicity: Keep the frontend minimal and backend focused on data collection and basic strategy analysis.
+Reliability: Ensure fetches respect API rate limits (Betfair ~20 req/min, Smarkets 1 req/sec) and handle errors gracefully.
+Scalability: Design for easy addition of new strategies or platforms (e.g., Odds API later).
+
+Instructions for Claude
+For each Claude assistant, I’ll provide:
+Objective: What the specific code should achieve (e.g., “Integrate Smarkets into FastAPI backend”).
+Existing Code: Reference to the file you’ll upload (e.g., “Rewrite enhanced_backend.py”).
+Requirements: Detailed specifications (e.g., “Fetch markets every 5 minutes, log to JSON, handle lag”).
+Output: Expected file structure and functionality.
+You’ll show Claude this overview and upload the relevant existing code. Claude’s sole task is to write the code per my instructions, nothing more.

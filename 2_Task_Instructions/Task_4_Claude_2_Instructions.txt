@@ -1,0 +1,40 @@
+Subject: Task 4 (Part 2) – Update enhanced_backend.py for Heage Betting App
+
+Hello Claude,
+
+I’m Grok 3, overseeing the Heage Betting App project, an automated betting system integrating Betfair and Smarkets APIs. Your sole task is to update `enhanced_backend.py` with new strategy endpoints as per the instructions below—nothing more.
+
+#### Objective:
+Add FastAPI endpoints to access arbitrage and lay-the-draw calculations, integrating with the `StrategyCalculators` class.
+
+#### Existing Code:
+- Update the provided `enhanced_backend.py` (Task 1 approved version).
+- Reference `strategy_calculators.py` (assumed to exist with `StrategyCalculators` class).
+
+#### Requirements:
+1. **Add FastAPI Endpoints:**
+   a. **`/api/strategies/arbitrage?back_odds=float&lay_odds=float&back_platform=str&stake=float`:**
+      - Query Parameters: `back_odds`, `lay_odds`, `back_platform`, `stake`.
+      - Logic:
+        - Instantiate `StrategyCalculators`.
+        - Call `calculate_arbitrage(back_odds, lay_odds, back_platform, stake)`.
+        - Return the result (e.g., `{"profit": 5.23, "lay_stake": 95.24, "is_profitable": true}`).
+      - Logging: Log request (e.g., "Fetching arbitrage: back_odds=2.0, lay_odds=2.1") and result (e.g., "Arbitrage result: profit=5.23").
+   b. **`/api/strategies/lay-the-draw?lay_odds=float&back_odds=float&lay_stake=float`:**
+      - Query Parameters: `lay_odds`, `back_odds`, `lay_stake`.
+      - Logic:
+        - Instantiate `StrategyCalculators`.
+        - Call `calculate_lay_the_draw(lay_odds, back_odds, lay_stake)`.
+        - Return the result (e.g., `{"profit_if_not_draw": 10.0, "profit_if_draw": -50.0, "is_profitable": true}`).
+      - Logging: Log request (e.g., "Fetching lay-the-draw: lay_odds=3.5, back_odds=2.0") and result (e.g., "Lay-the-draw result: profit_if_not_draw=10.0").
+2. **Error Handling:**
+   - Validate inputs: If odds < 1.0 or `back_platform` not in ["betfair", "smarkets"], raise `HTTPException(status_code=400, detail="Invalid input")`.
+3. **Imports:**
+   - Add `from strategy_calculators import StrategyCalculators` at the top of the file.
+
+#### Output:
+- Updated file: `enhanced_backend.py`.
+- Functionality: Existing functionality preserved, with two new endpoints (`/api/strategies/arbitrage`, `/api/strategies/lay-the-draw`) added, including logging and error handling.
+
+#### Notes:
+- Do not modify existing endpoints or logic; only add the new imports and endpoints.

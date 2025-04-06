@@ -1,0 +1,74 @@
+# Task_4_Revise_Strategy_Calculators_Instructions.txt
+# Instructions for Claude to revise strategy_calculators.py
+# Date: April 05, 2025
+
+# Objective:
+# Revise the provided strategy_calculators.py to address all identified issues, ensure all 29 football bet types are correctly implemented, and make the code production-ready for the Heage Betting App. Your sole task is to update this file as per the instructions—nothing more.
+
+# Instructions:
+# 1. Fix Logging Issues:
+#    - In calculate_arbitrage, remove references to undefined variables half_name, market_type, profit_scenarios, and lay_stakes. Update the logging message to "Arbitrage calculation: min_profit={min_profit:.2f}, is_profitable={is_profitable}".
+#    - In calculate_half_markets, update the logging message to reflect the half and market_type (e.g., "First Half Goals calculation: min_profit={min_profit:.2f}, is_profitable={is_profitable}").
+#    - In calculate_team_corners_cards, update the logging message to "Team {market_type.capitalize()} calculation for {team}: min_profit={min_profit:.2f}, is_profitable={is_profitable}".
+#    - In calculate_odd_even_goals, update the logging message to "Odd/Even Goals calculation: min_profit={min_profit:.2f}, is_profitable={is_profitable}".
+#    - In calculate_method_of_first_goal, complete the logging statement to "Method of First Goal calculation: min_profit={min_profit:.2f}, is_profitable={is_profitable}".
+
+# 2. Standardize Return Structures:
+#    - Update calculate_arbitrage to return a dictionary with "type": "Arbitrage", "profit_scenarios": {"back_wins": profit_if_back_wins, "lay_wins": profit_if_lay_wins}, "min_profit", "is_profitable", "lay_stakes": {"lay": lay_stake}, "stake", "commission", and "back_commission".
+#    - Update calculate_half_markets to return "type": f"{half_name} {market_type.capitalize()}", "profit_scenarios": profit_scenarios, "lay_stakes": lay_stakes, and remove references to undefined variables profit_odd, profit_even, lay_stake_odd, lay_stake_even.
+#    - Update calculate_team_corners_cards to return "type": f"Team {market_type.capitalize()} ({team})", "profit_scenarios": {"over": profit_over, "under": profit_under}, "lay_stakes": {"over": lay_stake_over, "under": lay_stake_under}, and remove references to undefined variables profit_scenarios, lay_stakes.
+#    - Update calculate_odd_even_goals to return "type": "Odd/Even Goals", "profit_scenarios": {"odd": profit_odd, "even": profit_even}, "lay_stakes": {"odd": lay_stake_odd, "even": lay_stake_even}, and remove references to undefined variables profit, lay_stake.
+#    - Add "profit_scenarios": {"not_draw": profit_if_not_draw, "draw": profit_if_draw} to the return dictionary of calculate_lay_the_draw.
+
+# 3. Ensure All 29 Bet Types Are Correctly Implemented:
+#    - All 29 bet types are present: calculate_arbitrage, calculate_lay_the_draw, calculate_1x2, calculate_over_under, calculate_btts, calculate_double_chance, calculate_correct_score, calculate_halftime_fulltime, calculate_asian_handicap, calculate_draw_no_bet, calculate_goalscorer, calculate_total_corners, calculate_total_cards, calculate_player_props, calculate_win_either_half, calculate_clean_sheet, calculate_half_markets, calculate_team_corners_cards, calculate_odd_even_goals, calculate_score_cast, calculate_team_to_score_first, calculate_race_to_goals, calculate_method_of_first_goal, calculate_handicap_result, calculate_multi_goals, calculate_team_goals, calculate_winning_margin, calculate_time_of_first_goal, calculate_outright, calculate_match_specials, calculate_goal_range.
+#    - Ensure each method is complete and follows the standardized structure (as in calculate_1x2).
+
+# 4. Standardize Commission Handling:
+#    - Add a back_commission parameter (default 0.0) to all methods that lack it: calculate_double_chance, calculate_halftime_fulltime, calculate_asian_handicap, calculate_goalscorer, calculate_total_corners, calculate_total_cards, calculate_player_props, calculate_win_either_half, calculate_clean_sheet, calculate_half_markets, calculate_team_corners_cards, calculate_odd_even_goals, calculate_score_cast, calculate_team_to_score_first, calculate_race_to_goals, calculate_method_of_first_goal, calculate_handicap_result, calculate_multi_goals, calculate_team_goals, calculate_winning_margin, calculate_time_of_first_goal, calculate_outright, calculate_match_specials, calculate_goal_range.
+#    - Update profit calculations in these methods to apply back_commission (e.g., profit = (stake * (back_odds - 1) * (1 - back_commission)) - lay liabilities).
+
+# 5. Add Parameter Validation:
+#    - In calculate_half_markets, validate that half is "first" or "second" and market_type is "goals", "corners", or "cards". Return None and log a warning if invalid.
+#    - In calculate_team_goals and calculate_team_corners_cards, validate that team is "home" or "away" and market_type (for calculate_team_corners_cards) is "corners" or "cards". Return None and log a warning if invalid.
+#    - In calculate_race_to_goals, validate that goals is a positive integer. Return None and log a warning if invalid.
+
+# 6. Refactor Redundant Code:
+#    - Create a helper method calculate_lay_stake(stake, back_odds, lay_odds, commission) to compute lay stakes and handle division by zero:
+#      ```python
+#      def calculate_lay_stake(stake, back_odds, lay_odds, commission):
+#          denominator = lay_odds * (1 - commission) - 1
+#          if denominator <= 0:
+#              logger.warning(f"Division by zero in lay stake calculation: lay_odds={lay_odds}, commission={commission}")
+#              return None
+#          return (stake * back_odds) / denominator
+#      ```
+#    - Use this helper in all methods for lay stake calculations.
+#    - Merge calculate_team_goals and calculate_team_corners_cards into a single method calculate_team_market(back_over_odds, lay_over_odds, back_under_odds, lay_under_odds, stake, market_type="goals", team="home", commission=0.02, back_commission=0.0), where market_type can be "goals", "corners", or "cards".
+
+# 7. Optimize Multi-Outcome Bets:
+#    - In methods like calculate_correct_score, calculate_score_cast, and calculate_goalscorer, precompute lay liabilities to reduce the time complexity from O(n²) to O(n). For example:
+#      ```python
+#      total_lay_liability = sum(lay_stakes[score] * (lay_odds_dict[score] - 1) * (1 - commission) for score in scores)
+#      for target_score in scores:
+#          profit = (stake * (back_odds_dict[target_score] - 1) * (1 - back_commission)) - (total_lay_liability - lay_stakes[target_score] * (lay_odds_dict[target_score] - 1) * (1 - commission))
+#          profit_scenarios[target_score] = profit
+#      ```
+
+# 8. Enhance Error Handling:
+#    - Add logging for invalid inputs in all methods (e.g., logger.warning(f"Invalid odds in {method_name}: {odds}")) before returning None.
+#    - Ensure division by zero is handled in all methods using the calculate_lay_stake helper.
+
+# 9. Enhance Documentation:
+#    - Update docstrings for all methods to include:
+#      - Description of the bet type.
+#      - Expected format of dictionary keys (for multi-outcome bets).
+#      - Edge cases and error handling (e.g., odds < 1, division by zero).
+#      - Example usage (e.g., input odds and expected output).
+
+# 10. Provided Code to Revise:
+[Insert the full strategy_calculators.py code here, as provided above.]
+
+# Output:
+# - Save the revised file as strategy_calculators_draft.py in 6_Working_Drafts/.
+# - Ensure all 29 bet types are correctly implemented with consistent structure, proper commission handling, and optimized performance.

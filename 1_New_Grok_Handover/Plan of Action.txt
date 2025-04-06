@@ -1,0 +1,64 @@
+Plan of Action
+Phase 1: Backend Integration and Synchronization
+Task 1: Rewrite enhanced_backend.py
+Claude Assistant 1:
+Objective: Create a unified FastAPI backend integrating Betfair and Smarkets with 5-minute synchronized fetching.
+Existing Code: enhanced_backend.py (and reference server.cjs for Betfair auth logic).
+Requirements:
+Use BetfairAPI and SmarketsAPI classes for fetching.
+Fetch British football markets (list provided) every 5 minutes using schedule.
+Log markets and odds to data/markets_<timestamp>.json.
+Detect lag between Betfair and Smarkets fetches; if >1s, offset Smarkets fetch by the lag amount using async tasks.
+Include endpoints: /health, /api/live-markets, /api/odds/{platform}/{market_id}.
+Output: Updated enhanced_backend.py.
+Verification: I’ll check for correct scheduling, logging, and lag handling; ChatGPT will confirm syntax and logic.
+Task 2: Update betfair_api.py
+Claude Assistant 2:
+Objective: Adjust Betfair API client to filter British football markets and support async fetching.
+Existing Code: betfair_api.py.
+Requirements:
+Filter for eventTypeIds=["1"] (soccer), inPlayOnly=True, and British competitions.
+Return up to 100 markets (max allowed).
+Add async method async_list_live_markets for synchronized fetching.
+Output: Updated betfair_api.py.
+Verification: Ensure British market filtering and async compatibility.
+Task 3: Update smarkets_api.py
+Claude Assistant 3:
+Objective: Adjust Smarkets API client to filter British football markets and support async fetching.
+Existing Code: smarkets_api.py.
+Requirements:
+Filter for football competitions in BRITISH_COMPETITIONS.
+Limit to 5 competitions and 10 events each to respect 1 req/sec limit.
+Add async method async_list_live_markets.
+Output: Updated smarkets_api.py.
+Verification: Confirm filtering and async support.
+Phase 2: Strategy Calculators
+Task 4: Create strategy_calculators.py
+Claude Assistant 4:
+Objective: Build calculators for arbitrage and lay-the-draw strategies.
+Existing Code: None (new file, reference hedge_calculator.py for style).
+Requirements:
+Class StrategyCalculators with methods:
+calculate_arbitrage(back_odds, lay_odds, back_platform, stake): Compute cross-platform arbitrage profit.
+calculate_lay_the_draw(lay_odds, back_odds, lay_stake): Compute lay-the-draw profit (Betfair only for now).
+Account for commissions (Betfair 5%, Smarkets 2%).
+Add endpoints to enhanced_backend.py: /api/strategies/arbitrage, /api/strategies/lay-the-draw.
+Output: New strategy_calculators.py and updated enhanced_backend.py.
+Verification: Test profit calculations with sample odds.
+Phase 3: Simple Frontend
+Task 5: Rewrite RecentOdds.jsx
+Claude Assistant 5:
+Objective: Simplify frontend to display synchronized Betfair and Smarkets odds.
+Existing Code: RecentOdds.jsx.
+Requirements:
+Fetch from /api/live-markets every 5 minutes.
+Display two tables: Betfair and Smarkets, with columns: Event, Runner, Back, Lay.
+No additional features (keep minimal).
+Output: Updated RecentOdds.jsx.
+Verification: Confirm data display and 5-minute refresh.
+Phase 4: Verification and Integration
+My Role: After each Claude task, I’ll:
+Review code for correctness, adherence to requirements, and integration with existing files.
+Test locally (e.g., run backend, check logs, verify frontend).
+Coordinate with ChatGPT for a second review.
+Your Role: Upload code to Claude, run the system, report issues.
